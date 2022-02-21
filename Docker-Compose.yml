@@ -1,0 +1,30 @@
+services:
+  db:
+    container_name: appian-db
+    expose:
+      - '5432'
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=zack
+      - POSTGRES_PASSWORD=pass
+    volumes: 
+      - ./Backend/DB/postgres-data:/var/lib/postgresql/data
+      - ./Backend/DB/test-data.csv:/var/lib/test-data.csv
+      - ./Backend/DB/appian-weather.sql:/docker-entrypoint-initdb.d/appian-weather.sql     
+  api:
+    container_name: appian-api
+    ports:
+      - '3001:3001'
+    build: 
+      context: ./Backend/api/
+      dockerfile: Dockerfile
+    restart: always
+  frontend:
+    container_name: appian-frontend
+    ports:
+      - '8888:3000'
+    build: 
+      context: ./Frontend/
+      dockerfile: Dockerfile
+    restart: always

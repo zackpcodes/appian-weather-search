@@ -1,0 +1,6 @@
+@import '~antd/dist/antd.css';
+
+.react-datetime-picker {
+  border-radius: 18px;
+  padding: 5px;
+}

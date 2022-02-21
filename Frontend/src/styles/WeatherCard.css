@@ -1,0 +1,50 @@
+.weather-card {
+  margin: 15px;
+  border-radius: 15px;
+  padding: 30px;
+  flex: 0;
+  min-width: 145px;
+  max-width: 145px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 5px;
+  font-size: 1rem;
+  box-shadow: 0px 0px 20px 1px #0080FF15;
+}
+
+.weather-datetime,
+.weather-location {
+  text-transform: uppercase;
+  font-size: 0.75em;
+  flex: 1;
+}
+
+.weather-forecast {
+  flex: 3;
+  min-height: 50px;
+}
+
+.weather-forecast.rainy,
+.weather-forecast.cloudy,
+.weather-forecast.partly-cloudy,
+.weather-forecast.sunny {
+  background-image: url("/weathericons.png");
+  background-size: 190px;
+}
+
+.weather-forecast.sunny {
+  background-position-x: 10px;
+}
+
+.weather-forecast.rainy {
+  background-position: 75px 60px;
+}
+
+.weather-forecast.cloudy {
+  background-position-x: 137px;
+}
+
+.weather-forecast.partly-cloudy {
+  background-position: 10px -120px;
+}

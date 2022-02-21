@@ -1,0 +1,17 @@
+{
+    "name": "appian_weather",
+    "version": "1.0.0",
+    "description": "Appian weather search app",
+    "author": "Zackary Pulaski",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "latest",
+      "pg-promise": "latest",
+      "cors": "latest",
+      "cookie-parser": "latest",
+      "express-session": "latest"
+    }
+  }
